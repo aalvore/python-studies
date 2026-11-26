@@ -6,7 +6,6 @@ while resposta == 'S':
 
     resposta = str(input('Quer continuar? [S/N] ')).upper().strip()[0]
 
-
 print(f'{len(valores)} numeros foram digitados')
 print(f'{sorted(valores, reverse=True)} em ordem decrescente')
 if 5 in valores:

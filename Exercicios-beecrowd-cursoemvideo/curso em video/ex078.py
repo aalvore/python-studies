@@ -1,15 +1,23 @@
-valores = list()
-posicoesM = list()
-posicoesm = list()
-for v in range(0, 5):
-    valores.append(int(input(f'Digite um valor para a posição {v}: ')))
-maior = max(valores)
-menor = min(valores)
-for v in enumerate(valores):
-    if v[1] == maior:
-        posicoesM.append(v[0])
-    if v[1] == menor:
-        posicoesm.append(v[0])
-
-print(f'O maior valor digitado foi {maior} e ele esta nas posições {posicoesM}',)
-print(f'O menor valor digitado foi o {menor} e ele esta nas posições {posicoesm}')
+listanum = []
+maior = 0
+menor = 0
+for c in range(0, 5):
+    listanum.append(int(input(f'Digite um valor para a Posição {c}:')))
+    if c == 0:
+        maior = menor = listanum[c]
+    else:
+        if listanum[c] > maior:
+            maior = listanum[c]
+        if listanum[c] < menor:
+            menor = listanum[c]
+print(f'Todos os numeros digitados na lista foram {listanum}')
+print(f'O maior numero digitado foi o {maior} nas posições ', end='')
+for i, v in enumerate(listanum):
+    if listanum[i] == maior:
+        print(f'{i}... ', end='')
+print()
+print(f'O menor numero digitado foi o {menor} nas posições ', end='')
+for i, v in enumerate(listanum):
+    if listanum[i] == menor:
+        print(f'{i}... ', end='')
+print()

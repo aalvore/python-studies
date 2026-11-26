@@ -1,6 +1,5 @@
 valores = list()
-resposta = 'S'
-while resposta == 'S':
+while True:
     valor = int(input('Digite um valor: '))
     if valor in valores:
         print('Numero duplicado! não vou adicionar...')
@@ -8,4 +7,6 @@ while resposta == 'S':
         valores.append(valor)
 
     resposta = str(input('Quer continuar? [S/N] ')).upper().strip()[0]
+    if resposta in 'N':
+        break
 print(f'Vc digitou os valores {sorted(valores)}')
